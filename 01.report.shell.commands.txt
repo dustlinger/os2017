@@ -59,7 +59,8 @@ reboot   system boot  4.4.0-31-generic Fri Jan 13 18:36 - 03:52  (-14:-43)
 wtmp begins Fri Jan 13 18:36:10 2017 
 
  ##finger
-finger: command not found
+Login       Name       Tty      Idle  Login Time   Office     Office Phone
+dustlinger  Nghia Le   tty7           Jan 17 17:09 (:0)
  
  ##w
  17:18:21 up 9 min,  1 user,  load average: 0.01, 0.17, 0.15
