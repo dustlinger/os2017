@@ -1,0 +1,38 @@
+   ## ps -e
+4696 ?        00:00:02 gnome-terminal-
+4704 pts/2    00:00:00 bash
+4724 ?        00:00:00 kworker/u8:3
+4744 ?        00:00:00 kworker/1:1
+4745 ?        00:00:00 kworker/2:1
+4775 ?        00:00:00 kworker/u8:1
+4801 ?        00:00:00 kworker/2:0
+4815 ?        00:00:00 kworker/u8:0
+4828 ?        00:00:00 kworker/3:0
+4832 pts/2    00:00:00 ps
+
+  ## gnome-calculator &
+[1] 5019
+
+  ## ps -e | grep "gnome-calculato"
+5019 pts/2    00:00:00 gnome-calculato
+
+  ## cat /proc/5019/status
+CapEff:	0000000000000000
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+Seccomp:	0
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	288
+nonvoluntary_ctxt_switches:	42
+
+  ## kill -STOP 5019
+[1]+  Stopped                 gnome-calculator
+
+  ## kill -CONT 5019
+no output
+  
+  ## kill -KILL 5019
+no output
