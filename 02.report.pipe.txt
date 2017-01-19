@@ -1,0 +1,18 @@
+   ## ls | grep "list" 
+ list test grep
+ 
+   ## wc -l /etc/passwd
+40 /etc/passwd
+
+   ## free --human | head -n 2
+              total        used        free      shared  buff/cache   available
+Mem:           5.7G        1.1G        3.4G        215M        1.3G        4.1G
+  
+   ## cat /proc/cpuinfo | grep "siblings"
+siblings	: 4
+siblings	: 4
+siblings	: 4
+siblings	: 4
+
+   ## find /home/dustlinger/Pictures -type f -name ".*jpg" | wc -l
+0
