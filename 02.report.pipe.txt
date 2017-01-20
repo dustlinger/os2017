@@ -8,11 +8,12 @@
               total        used        free      shared  buff/cache   available
 Mem:           5.7G        1.1G        3.4G        215M        1.3G        4.1G
   
-   ## cat /proc/cpuinfo | grep "siblings"
-siblings	: 4
-siblings	: 4
-siblings	: 4
-siblings	: 4
+   ## cat /proc/cpuinfo | grep "processor"
+processor	: 0
+processor	: 1
+processor	: 2
+processor	: 3
+
 
    ## find /home/dustlinger/Pictures -type f -name ".*jpg" | wc -l
 0
