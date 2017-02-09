@@ -1,0 +1,15 @@
+~$ firefox
+
+** First way
+
+~$ ps -e | grep "firefox" 
+ 4106 ?        00:03:13 firefox
+~$ ps -o nlwp 4106 
+ NLWP
+  55
+
+** Second way 
+~$ cd /proc/4106/task
+/proc/4106/task$ ls | wc -l
+ 52
+
