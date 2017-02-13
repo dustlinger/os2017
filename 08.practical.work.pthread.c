@@ -30,38 +30,38 @@ item *consume() {
     return i;
 }
 void *threadProduceFunction(void *params) {
-	  printf("- Produce thread.\n");
-	  printf("- Initial value : First: %d, last: %d\n", first, last );
-	  item* i1;
-	  i1.type = 2;
-	  i1.amount = 4;
-	  i1.unit = 1;
+    printf("- Produce thread.\n");
+    printf("- Initial value : First: %d, last: %d\n", first, last );
+    item* i1;
+    i1.type = '2';  
+    i1.amount = 4;
+    i1.unit = '1';
     item* i2;
-	  i2.type = 2;
-	  i2.amount = 1;
-	  i2.unit = 9; 
+    i2.type = '2';
+    i2.amount = 1;
+    i2.unit = '1';
     item* i3;
-	  i3.type = 9;
-	  i3.amount = 6;
-	  i3.unit = 9;
-	  printf("- Produce item 1:\n Type: %c\n Amount: %d\n Unit: %c\n", i1.type,i1.amount,i1.unit );
+    i3.type = '9';
+    i3.amount = 6;
+    i3.unit = '9';
+    printf("- Produce item 1:\n Type: %c\n Amount: %d\n Unit: %c\n", i1.type,i1.amount,i1.unit );
     produce(&i1);
     printf(" First: %d, last: %d\n", first, last);
-	  printf("\n- Produce item 2:\n Type: %c\n Amount: %d\n Unit: %c\n", i2.type,i2.amount,i2.unit );
+    printf("\n- Produce item 2:\n Type: %c\n Amount: %d\n Unit: %c\n", i2.type,i2.amount,i2.unit );
     produce(&i2);
     printf(" First: %d, last: %d\n", first, last);
-	  printf("\n- Produce item 3:\n Type: %c\n Amount: %d\n Unit: %c\n", i3.type,i3.amount,i3.unit );
+    printf("\n- Produce item 3:\n Type: %c\n Amount: %d\n Unit: %c\n", i3.type,i3.amount,i3.unit );
     produce(&i3);
     printf(" First: %d, last: %d\n", first, last);
-	  return 0;
+    return 0;
 }
 
 void *threadConsumeFunction(void *params) {
-	  printf("\n - Consume thread\n");
-	  consume();
-	  printf("\n - Consume an item: First: %d, last: %d\n", first, last );
-	  consume();
-	  printf("\n - Consume another item: First: %d, last: %d\n", first, last );
+    printf("\n - Consume thread\n");
+    consume();
+    printf("\n - Consume an item: First: %d, last: %d\n", first, last );
+    consume();
+    printf("\n - Consume another item: First: %d, last: %d\n", first, last );
 }
 int main() {
     pthread_t tid_prod, tid_cons;
