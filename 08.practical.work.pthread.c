@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include <pthread.h>
+#include<pthread.h>
 #define BUFFER_SIZE 10
 
 typedef struct{
@@ -33,15 +33,15 @@ item *consume() {
 void *threadProduceFunction(void *params) {
     printf("- Produce thread.\n");
     printf("- Initial value : First: %d, last: %d\n", first, last );
-    item* i1;
+    item i1;
     i1.type = '2';  
     i1.amount = 4;
     i1.unit = '1';
-    item* i2;
+    item i2;
     i2.type = '2';
     i2.amount = 1;
     i2.unit = '1';
-    item* i3;
+    item i3;
     i3.type = '9';
     i3.amount = 6;
     i3.unit = '9';
@@ -60,9 +60,9 @@ void *threadProduceFunction(void *params) {
 void *threadConsumeFunction(void *params) {
     printf("\n - Consume thread\n");
     consume();
-    printf("\n - Consume an item: First: %d, last: %d\n", first, last );
+    printf("- Consume an item: First: %d, last: %d\n", first, last );
     consume();
-    printf("\n - Consume another item: First: %d, last: %d\n", first, last );
+    printf("- Consume another item: First: %d, last: %d\n", first, last );
 }
 int main() {
     pthread_t tid_prod, tid_cons;
